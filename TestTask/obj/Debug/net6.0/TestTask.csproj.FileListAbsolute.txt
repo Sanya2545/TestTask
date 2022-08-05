@@ -1,0 +1,15 @@
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.csproj.AssemblyReference.cache
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.GeneratedMSBuildEditorConfig.editorconfig
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.AssemblyInfoInputs.cache
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.AssemblyInfo.cs
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.csproj.CoreCompileInputs.cache
+D:\Radency\TestTask\TestTask\bin\Debug\net6.0\TestTask.exe
+D:\Radency\TestTask\TestTask\bin\Debug\net6.0\TestTask.deps.json
+D:\Radency\TestTask\TestTask\bin\Debug\net6.0\TestTask.runtimeconfig.json
+D:\Radency\TestTask\TestTask\bin\Debug\net6.0\TestTask.dll
+D:\Radency\TestTask\TestTask\bin\Debug\net6.0\TestTask.pdb
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.dll
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\refint\TestTask.dll
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.pdb
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\TestTask.genruntimeconfig.cache
+D:\Radency\TestTask\TestTask\obj\Debug\net6.0\ref\TestTask.dll
