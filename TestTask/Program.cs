@@ -6,15 +6,6 @@ namespace TestTask
     {
         public static uint [] BubbleSortByWeight(uint[] nums, uint[] sums )
         {
-            //Console.WriteLine("Исходный массив");
-            //Console.WriteLine(string.Join(" ", nums.Select(x => x.ToString()).ToArray()));
-            //var v = nums.OrderBy(s => int.Parse((s.ToString().ToCharArray()[0]).ToString())
-            //    + int.Parse((s.ToString().ToCharArray()[1]).ToString()));
-            //Console.WriteLine("последовательность по возрастанию сумм цифр");
-            //Console.WriteLine(string.Join(" ", v.Select(x => x.ToString()).ToArray()));
-            //Console.ReadKey();
-            //return nums;
-
             uint tempNum = 0;
             uint tempSum = 0;
             for (int j = 0; j <= nums.Length - 2; j++)
@@ -70,7 +61,7 @@ namespace TestTask
                     //nums[i] = nums[i] / 10;
 
                 }
-                Console.WriteLine(sums[i]);
+                //Console.WriteLine(sums[i]);
             }
             nums = BubbleSortByWeight(nums, sums);
             string numberArrays = "";
@@ -84,9 +75,11 @@ namespace TestTask
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            string str = PrepareForSortByWeight("45 34 24 108 76 58 64 130 80");
-            Console.WriteLine(str);
+            
+            string str1 = PrepareForSortByWeight("45 34 24 108 76 58 64 130 80");
+            Console.WriteLine($"Sorted Line #1 :\n{str1}");
+            string str2 = PrepareForSortByWeight("    2022 70 123    3344 13 ");
+            Console.WriteLine($"Sorted Line #1 :\n{str2}");
         }
     }
     
