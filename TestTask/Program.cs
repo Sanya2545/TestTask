@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Text.RegularExpressions;
+
 namespace TestTask
 {
     public class Program
@@ -8,6 +10,11 @@ namespace TestTask
         {
             if (string.IsNullOrEmpty(weights) || string.IsNullOrWhiteSpace(weights))
             {
+                return String.Empty;
+            }
+            else if (!Regex.IsMatch(weights, @"\d\s"))
+            {
+                //Console.WriteLine("String is not numeric !");
                 return String.Empty;
             }
             //char[] charsToTrim = { ' ' }; 
@@ -88,6 +95,8 @@ namespace TestTask
             Console.WriteLine($"Sorted Line #1 :\n{str2}");
             string str3 = Order("");
             Console.WriteLine(str3);
+            string str4 = Order("hdhahdgsjhdgajgd");
+            Console.WriteLine(str4);
         }
     }
     
