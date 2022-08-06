@@ -62,7 +62,7 @@ namespace TestTask
             string numberArrays = "";
             foreach (int i in nums)
             {
-                numberArrays += i.ToString() + "\t";
+                numberArrays += i.ToString() + " ";
             }
             return numberArrays;
         }
