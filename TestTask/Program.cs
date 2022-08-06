@@ -6,6 +6,10 @@ namespace TestTask
     {
         public static string Order(string weights = "")
         {
+            if (string.IsNullOrEmpty(weights) || string.IsNullOrWhiteSpace(weights))
+            {
+                return String.Empty;
+            }
             //char[] charsToTrim = { ' ' }; 
             weights = weights.Trim();
             string[] weightsArray = weights.Split(' ');
@@ -60,9 +64,16 @@ namespace TestTask
             }
 
             string numberArrays = "";
-            foreach (int i in nums)
+            for(int i = 0; i < nums.Length; ++i)
             {
-                numberArrays += i.ToString() + " ";
+                if (i == nums.Length - 1)
+                {
+                    numberArrays += nums[i].ToString();
+                }
+                else
+                {
+                    numberArrays += nums[i].ToString() + " ";
+                }
             }
             return numberArrays;
         }
@@ -75,6 +86,8 @@ namespace TestTask
             Console.WriteLine($"Sorted Line #1 :\n{str1}");
             string str2 = Order("    2022 70 123    3344 13 ");
             Console.WriteLine($"Sorted Line #1 :\n{str2}");
+            string str3 = Order("");
+            Console.WriteLine(str3);
         }
     }
     
