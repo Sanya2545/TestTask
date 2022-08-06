@@ -4,8 +4,27 @@ namespace TestTask
 {
     public class Program
     {
-        public static uint [] BubbleSortByWeight(uint[] nums, uint[] sums )
+        public static string Order(string weights = "")
         {
+            //char[] charsToTrim = { ' ' }; 
+            weights = weights.Trim();
+            string[] weightsArray = weights.Split(' ');
+            uint[] nums = new uint[weightsArray.Length];
+            uint[] sums = new uint[nums.Length];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                uint.TryParse(weightsArray[i], out nums[i]);
+                uint temp = 1;
+                temp = nums[i];
+                while (temp > 0)
+                {
+                    sums[i] = sums[i] + temp % 10;
+                    temp= temp / 10;
+                    //nums[i] = nums[i] / 10;
+
+                }
+                //Console.WriteLine(sums[i]);
+            }
             uint tempNum = 0;
             uint tempSum = 0;
             for (int j = 0; j <= nums.Length - 2; j++)
@@ -39,31 +58,7 @@ namespace TestTask
                     }
                 }
             }
-            return nums;
 
-        }
-        public static string PrepareForSortByWeight(string weights = "")
-        {
-            //char[] charsToTrim = { ' ' }; 
-            weights = weights.Trim();
-            string[] weightsArray = weights.Split(' ');
-            uint[] nums = new uint[weightsArray.Length];
-            uint[] sums = new uint[nums.Length];
-            for (int i = 0; i < nums.Length; i++)
-            {
-                uint.TryParse(weightsArray[i], out nums[i]);
-                uint temp = 1;
-                temp = nums[i];
-                while (temp > 0)
-                {
-                    sums[i] = sums[i] + temp % 10;
-                    temp= temp / 10;
-                    //nums[i] = nums[i] / 10;
-
-                }
-                //Console.WriteLine(sums[i]);
-            }
-            nums = BubbleSortByWeight(nums, sums);
             string numberArrays = "";
             foreach (int i in nums)
             {
@@ -76,9 +71,9 @@ namespace TestTask
         static void Main(string[] args)
         {
             
-            string str1 = PrepareForSortByWeight("45 34 24 108 76 58 64 130 80");
+            string str1 = Order("45 34 24 108 76 58 64 130 80");
             Console.WriteLine($"Sorted Line #1 :\n{str1}");
-            string str2 = PrepareForSortByWeight("    2022 70 123    3344 13 ");
+            string str2 = Order("    2022 70 123    3344 13 ");
             Console.WriteLine($"Sorted Line #1 :\n{str2}");
         }
     }
